@@ -22,4 +22,5 @@ get nennwert(){
 set nennwert(nennwert:number){
 this.nennwert = nennwert;
 }
+
 }
