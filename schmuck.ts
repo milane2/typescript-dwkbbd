@@ -1,21 +1,17 @@
-import { Gegenstand } from "./gegenstand"; //von Stackblitz automat. generiert
+import { Gegenstand } from "./gegenstand";
+
 
 export class Schmuck extends Gegenstand {
 
 
   constructor( id: number, wert: number, public bezeichnung: string) {
-super(id, wert);
+    super(id, wert);
 }
-  get bezeichnung() { 
-    return this.bezeichnung;
+
+  toString() : string{
+    let text : string = "\n\nSchmuckstück" ;
+    text += super.toString();
+    text+= "\nBerzeichnung: " + this.bezeichnung;
+    return text;
   }
-  //todo
-set bezeichnung(bezeichnung : string) {
-this.bezeichnung = bezeichnung;
-}
-
-toString(): any{
-let text : string = "\nbezeichnung" + this.bezeichnung;
-
-}
 }
